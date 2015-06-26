@@ -2886,8 +2886,7 @@ public class WifiStateMachine extends StateMachine {
             }
         }
         mScreenBroadcastReceived.set(true);
-
-        getWifiLinkLayerStats(false);
+        sendMessage(CMD_GET_LINK_LAYER_STATS);
         mOnTimeScreenStateChange = mOnTime;
         lastScreenStateChangeTimeStamp = lastLinkLayerStatsUpdate;
 
